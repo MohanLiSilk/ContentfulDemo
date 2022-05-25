@@ -25,6 +25,8 @@ export default class ProductDetails extends ProductDetailsBase {
         this.swatchInitMessageStorage = {};
         this.swatchGroupIdList = $('[id^="swatchGroup"]').map((_, group) => $(group).attr('id'));
         this.storeInitMessagesForSwatches();
+        // contentful api
+        this.testContentful();
 
         const $form = $('form[data-cart-item-add]', $scope);
 
@@ -100,6 +102,14 @@ export default class ProductDetails extends ProductDetailsBase {
         $productOptionsElement.show();
 
         this.previewModal = modalFactory('#previewModal')[0];
+    }
+
+    // contentful api
+    testContentful() {
+        $.get('https://images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg?fm=jpg', (data, status) => {
+            console.log(data);
+            console.log('test');
+        });
     }
 
     registerAddToCartValidation() {

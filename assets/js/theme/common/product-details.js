@@ -106,7 +106,7 @@ export default class ProductDetails extends ProductDetailsBase {
 
     // contentful api
     testContentful() {
-        $.get('https://cdn.contentful.com/spaces/svkegf37pte8/environments/master/entries/6dQgiHSv3xXvCYfCIqvJX6?access_token=Nm_8aWnQQ4IL5ObTY6E_h0Y140OLwqY6B9cmrPrD6c4', (data, status) => {
+        $.get('https://cdn.contentful.com/spaces/svkegf37pte8/environments/master/entries/6dQgiHSv3xXvCYfCIqvJX6?access_token=Nm_8aWnQQ4IL5ObTY6E_h0Y140OLwqY6B9cmrPrD6c4&locale=zh-CN', (data, status) => {
             document.write(data.fields.title);
             console.log('test');
         });
